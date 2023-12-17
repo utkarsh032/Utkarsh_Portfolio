@@ -1,7 +1,8 @@
 import { BrowserRouter as Router } from "react-router-dom";
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Tech from "./components/Tech";
+// import Navbar from './components/Navbar';
+// import Hero from './components/Hero';
+// import Tech from "./components/Tech";
+import { Hero, Navbar, Tech, Works, } from "./components";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Hero />
         </div>
         <Tech />
+        <Works />
       </div>
     </Router>
   )
