@@ -9,7 +9,36 @@ import {
   omnifood,
   ubereat,
   destination,
+
+
+  insta,
+  linkedin,
+  twitter,
+  github
 } from "../assets";
+
+const services = [
+  {
+    title: "@utkarsh032",
+    icon: github,
+    link: "https://github.com/utkarsh032"
+  },
+  {
+    title: "@utkarshraz",
+    icon: insta,
+    link: "https://www.instagram.com/utkarshraz/"
+  },
+  {
+    title: "@utkarshraj032",
+    icon: linkedin,
+    link: "https://www.linkedin.com/in/utkarsh-raj032/"
+  },
+  {
+    title: "@UTKARSHRAZ1",
+    icon: twitter,
+    link: "https://twitter.com/UTKARSHRAZ1"
+  },
+];
 
 export const navLinks = [
   {
@@ -183,4 +212,4 @@ const projects = [
   // },
 ];
 
-export { technologies, projects };
+export { technologies, projects, services };

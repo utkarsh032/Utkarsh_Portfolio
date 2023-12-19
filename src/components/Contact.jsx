@@ -132,12 +132,11 @@ const Contact = () => {
             If you have any project or need help. Contact me
           </p>
         </div>
-        <div className="w-96 h-96 m-auto mt-16 rounded-full ring-8 ">
-          <iframe className="rounded-full w-96 h-96 invert shadow-2xl" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14245.733069724769!2d79.5041315!3d26.794329599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1702869691055!5m2!1sen!2sin" />
+        <div className="w-96 h-96 m-auto mt-16 rounded-full ring-8  ">
+          <iframe className="rounded-full w-96 h-96 invert shadow-2xl " src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14245.733069724769!2d79.5041315!3d26.794329599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1702869691055!5m2!1sen!2sin" />
         </div>
-
-
       </motion.div>
+
 
     </div>
   );

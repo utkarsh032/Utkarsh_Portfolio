@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 // eslint-disable-next-line no-undef
-module.exports = {
+const { withAnimations } = require('animated-tailwindcss')
+
+module.exports = withAnimations({
   content: ["./src/**/*.{js,jsx}"],
   mode: "jit",
   theme: {
@@ -22,8 +24,9 @@ module.exports = {
       backgroundImage: {
         "hero-pattern": "url('/src/assets/herobg.png')",
       },
-     
+
     },
   },
   plugins: [],
-};
+});
+

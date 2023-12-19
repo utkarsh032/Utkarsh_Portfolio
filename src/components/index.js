@@ -6,6 +6,8 @@ import Works from "./Works";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
 
+import About from "./About";
+
 
 export {
   Hero,
@@ -14,5 +16,6 @@ export {
   Tech,
   CanvasLoader,
   BallCanvas,
-  Contact
+  Contact,
+  About
 };

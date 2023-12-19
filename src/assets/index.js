@@ -21,6 +21,9 @@ import destination from "./destination.gif";
 import book from "./book.gif";
 import bharatestate from "./bharatestate.gif";
 
+import insta from "./insta.png";
+import linkedin from "./linkedin.png";
+import twitter from "./twitter.png";
 
 export {
   github,
@@ -41,4 +44,7 @@ export {
   destination,
   book,
   bharatestate,
+  insta,
+  linkedin,
+  twitter,
 };
