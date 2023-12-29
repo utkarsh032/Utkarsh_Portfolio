@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Resume from '../../src/assets/Resume.pdf'
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
@@ -28,7 +29,7 @@ const Navbar = () => {
   return (
     <nav
       className={`${styles.paddingX
-        } w-full flex items-center py-5 fixed top-0 z-20 ${scrolled ? "bg-primary" : "bg-transparent"
+        } w-full flex items-center py-5 fixed top-0 z-20 ${scrolled ? "backdrop-blur-xl" : "bg-transparent"
         }`}
     >
       <div className='w-full items-center max-w-7xl mx-auto'>
@@ -44,12 +45,13 @@ const Navbar = () => {
 
             <p className='text-white uppercase text-3xl font-bold cursor-pointer flex '>
               Utkarsh </p>
-
-
-
           </Link>
 
-          <button className="bg-[#915EFF] rounded-md  uppercase text-lg font-medium px-4 ">Resume</button>
+          <button className="bg-[#915EFF]  rounded-md  uppercase text-lg font-medium px-4 outline-none">
+            <a href={Resume} download>
+              Resume
+            </a>
+          </button>
         </div>
 
         <div className="py-4 ">
@@ -57,7 +59,7 @@ const Navbar = () => {
             {navLinks.map((nav) => (
               <li
                 key={nav.id}
-                className={`${active === nav.title ? "text-white" : "text-secondary"
+                className={`${active === nav.title ? "text-white" : "text-secondary bg"
                   } hover:text-white text-[18px] font-medium cursor-pointer `}
                 onClick={() => setActive(nav.title)}
               >
