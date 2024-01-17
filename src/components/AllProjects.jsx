@@ -1,12 +1,11 @@
+// AllProjects.js
+
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
-import { styles } from "../styles";
+import { projects } from '../constants';
 import { github } from "../assets";
-import { SectionWrapper } from "../hoc";
-import { projects } from "../constants";
-import { fadeIn, textVariant } from "../utils/motion";
-import { Link } from "react-router-dom";
+import { fadeIn } from "../utils/motion";
 
 const ProjectCard = ({
   index,
@@ -67,50 +66,19 @@ const ProjectCard = ({
   );
 };
 
-// ...
 
-const Works = () => {
-  const limitedProjects = projects.slice(0, 3);
-
+const AllProjects = () => {
   return (
-    <>
-      <div className="flex justify-between">
-        <div>
-          <motion.div variants={textVariant()}>
-            <span className="bg-[#915EFF] uppercase text-lg font-medium px-4 py-2 rounded-t-md rounded-br-md">My work</span>
-            <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
-          </motion.div>
-
-          <div className='w-full flex'>
-            <motion.p
-              variants={fadeIn("", "", 0.1, 1)}
-              className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
-            >
-              Following projects showcase my skills and experience through
-              real-world examples of my work. Each project is briefly described with
-              links to code repositories and live demos in it. It reflects my
-              ability to solve complex problems, work with different technologies,
-              and manage projects effectively.
-            </motion.p>
-          </div>
-        </div>
-        <Link
-          to="/project"
-          className="underline text-[#915EFF] font-medium leading-10 text-2xl"
-        >
-          Explore More Works..
-        </Link>
-      </div>
-
-      <div className='mt-20 flex flex-wrap gap-7 '>
-        {limitedProjects.map((project, index) => (
+    <div className="container mx-auto my-8">
+      <h1 className="text-3xl font-bold mb-4">All Projects</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
-      </div>
-    </>
+      </div>*
+      all project
+    </div>
   );
 };
 
-
-
-export default SectionWrapper(Works, "");
+export default AllProjects;

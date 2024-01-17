@@ -1,6 +1,8 @@
-import { BrowserRouter as Router } from "react-router-dom";
+import { Route, BrowserRouter as Router } from "react-router-dom";
 import { Hero, Navbar, Tech, Works, Contact, About } from "./components";
 import Footer from "./components/Footer";
+import AllProjects from "./components/AllProjects";
+import Statics from "./components/Statics";
 
 
 
@@ -15,6 +17,7 @@ function App() {
         </div>
         <Works />
         <Tech />
+        <Statics />
         <Contact />
         <About />
         <Footer />

@@ -9,12 +9,19 @@ import {
   omnifood,
   ubereat,
   destination,
+  book,
+  bharatestate,
 
 
   insta,
   linkedin,
   twitter,
-  github
+  github,
+
+  tt,
+  ttz,
+  szz
+
 } from "../assets";
 
 const services = [
@@ -101,6 +108,21 @@ const technologies = [
   },
 ];
 
+const statics = [
+  {
+    name: "Problem Solving",
+    eff: tt,
+  },
+  {
+    name: "Coding hours",
+    eff: ttz,
+  },
+  {
+    name: "Hours of Soft Skill",
+    eff: szz,
+  }
+];
+
 
 
 
@@ -168,48 +190,48 @@ const projects = [
     image: destination,
     source_code_link: "https://github.com/",
   },
-  // {
-  //   name: "book",
-  //   description:
-  //     "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-  //   tags: [
-  //     {
-  //       name: "nextjs",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "supabase",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "css",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: book,
-  //   source_code_link: "https://github.com/",
-  // },
-  // {
-  //   name: "bharatestate",
-  //   description:
-  //     "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-  //   tags: [
-  //     {
-  //       name: "nextjs",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "supabase",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "css",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: bharatestate,
-  //   source_code_link: "https://github.com/",
-  // },
+  {
+    name: "book",
+    description:
+      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "supabase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: book,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "bharatestate",
+    description:
+      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "supabase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: bharatestate,
+    source_code_link: "https://github.com/",
+  },
 ];
 
-export { technologies, projects, services };
+export { technologies, projects, services, statics };

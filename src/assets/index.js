@@ -25,6 +25,10 @@ import insta from "./insta.png";
 import linkedin from "./linkedin.png";
 import twitter from "./twitter.png";
 
+import tt from "./tt.svg";
+import ttz from "./ttz.svg";
+import szz from "./szz.svg";
+
 export {
   github,
   menu,
@@ -47,4 +51,8 @@ export {
   insta,
   linkedin,
   twitter,
+
+  tt,
+  ttz,
+  szz,
 };
