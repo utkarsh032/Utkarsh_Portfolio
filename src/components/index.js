@@ -7,6 +7,7 @@ import Contact from "./Contact";
 import CanvasLoader from "./Loader";
 
 import About from "./About";
+import Footer from "./Footer";
 
 
 export {
@@ -17,5 +18,6 @@ export {
   CanvasLoader,
   BallCanvas,
   Contact,
-  About
+  About,
+  Footer,
 };

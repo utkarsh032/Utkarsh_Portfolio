@@ -4,7 +4,7 @@ import { technologies } from "../constants";
 
 const Tech = () => {
   return (
-    <div className="h-40 mt-16">
+    <div className="">
       <span className="bg-[#915EFF] uppercase text-lg font-medium px-4 py-2 rounded-t-md rounded-br-md">My Skills</span>
       <div className='flex flex-row flex-wrap justify-center gap-10 py-4 '>
         {technologies.map((technology) => (

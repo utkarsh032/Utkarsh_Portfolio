@@ -8,41 +8,16 @@ import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { Link } from "react-router-dom";
 
-const ProjectCard = ({
-  index,
-  name,
-  description,
-  tags,
-  image,
-  source_code_link,
-}) => {
+const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
-      >
+      <Tilt options={{ max: 45, scale: 1, speed: 450 }} className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'>
         <div className='relative w-full h-[230px]'>
-          <img
-            src={image}
-            alt='project_image'
-            className='w-full h-full  rounded-2xl'
-          />
+          <img src={image} alt={name} className='w-full h-full rounded-2xl' />
 
-          <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
-            >
-              <img
-                src={github}
-                alt='source code'
-                className='w-1/2 h-1/2 object-contain'
-              />
+          <div className='absolute inset-0 flex justify-end m-3 card-img-hover'>
+            <div onClick={() => window.open(source_code_link, "_blank")} className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer' rel="noopener noreferrer">
+              <img src={github} alt='GitHub' className='w-1/2 h-1/2 object-contain' />
             </div>
           </div>
         </div>
@@ -54,10 +29,7 @@ const ProjectCard = ({
 
         <div className='mt-4 flex flex-wrap gap-2'>
           {tags.map((tag) => (
-            <p
-              key={`${name}-${tag.name}`}
-              className={`text-[14px] ${tag.color}`}
-            >
+            <p key={`${name}-${tag.name}`} className={`text-[14px] ${tag.color}`}>
               #{tag.name}
             </p>
           ))}
@@ -74,12 +46,21 @@ const Works = () => {
 
   return (
     <>
-      <div className="flex justify-between">
+      <div>
         <div>
-          <motion.div variants={textVariant()}>
-            <span className="bg-[#915EFF] uppercase text-lg font-medium px-4 py-2 rounded-t-md rounded-br-md">My work</span>
-            <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
-          </motion.div>
+          <div className="flex justify-between items-center">
+            <motion.div variants={textVariant()}>
+              <span className="bg-[#915EFF] uppercase text-lg font-medium px-4 py-2 rounded-t-md rounded-br-md">My work</span>
+              <h2 className={`${styles.sectionHeadText} ml-2`}>Projects.</h2>
+            </motion.div>
+
+            <Link
+              to="/projects"
+              className="hover:underline text-[#915EFF] font-medium leading-10 text-2xl"
+            >
+              Explore More Works..
+            </Link>
+          </div>
 
           <div className='w-full flex'>
             <motion.p
@@ -94,15 +75,10 @@ const Works = () => {
             </motion.p>
           </div>
         </div>
-        <Link
-          to="/project"
-          className="underline text-[#915EFF] font-medium leading-10 text-2xl"
-        >
-          Explore More Works..
-        </Link>
       </div>
 
-      <div className='mt-20 flex flex-wrap gap-7 '>
+      {/* Project Section */}
+      <div className='mt-20 flex flex-wrap gap-7'>
         {limitedProjects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
@@ -110,6 +86,9 @@ const Works = () => {
     </>
   );
 };
+
+
+
 
 
 

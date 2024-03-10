@@ -41,36 +41,40 @@ const ServiceCard = ({ index, title, icon, link }) => (
 const About = () => {
   return (
     <>
-      <div className="flex justify-between">
-        <div>
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+        <div className="md:mr-8">
           <motion.div variants={textVariant()}>
-            <span className="bg-[#915EFF] uppercase text-lg font-medium px-4 py-2 rounded-t-md rounded-br-md">My Links</span>
+            <span className="bg-[#915EFF] uppercase text-lg font-medium px-4 py-2  rounded-t-md rounded-br-md">My Links</span>
             <h2 className={styles.sectionHeadText}>Social Acc.</h2>
           </motion.div>
 
           <motion.p
             variants={fadeIn("", "", 0.1, 1)}
-            className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
+            className="mt-4 text-secondary text-[17px] max-w-[20rem] md:max-w-3xl leading-[30px]"
           >
-            I would love to hear from YOU !
+            I would love to hear from YOU!
           </motion.p>
         </div>
 
-        <Link
-
+        <a
           href="https://mail.google.com/mail/?view=cm&fs=1&to=&su=&body=&bcc=&cc="
           target="_blank"
           rel="noopener noreferrer"
-          className="underline text-[#915EFF] font-medium leading-10 text-2xl"
+          className="hover:underline text-[#915EFF] font-medium leading-10 text-2xl"
         >
-          utkarshraj525@gmail.com
-        </Link>
+          mail me :
+        </a>
       </div>
-      <div className='mt-20 flex flex-wrap gap-10'>
+
+
+
+      {/*social acc cards */}
+      <div className='mt-12 flex flex-wrap gap-10'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
+
     </>
   );
 };

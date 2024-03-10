@@ -1,7 +1,6 @@
-import { Route, BrowserRouter as Router } from "react-router-dom";
-import { Hero, Navbar, Tech, Works, Contact, About } from "./components";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { Hero, Navbar, Tech, Works, Contact, About, } from "./components";
 import Footer from "./components/Footer";
-import AllProjects from "./components/AllProjects";
 import Statics from "./components/Statics";
 
 
@@ -22,7 +21,7 @@ function App() {
         <About />
         <Footer />
       </div>
-    </Router>
+    </Router >
   )
 }
 

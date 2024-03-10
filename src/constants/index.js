@@ -47,33 +47,7 @@ const services = [
   },
 ];
 
-export const navLinks = [
-  {
-    id: "about",
-    title: "About",
-  },
-  {
-    id: "skill",
-    title: "Skill",
-  },
-  {
-    id: "project",
-    title: "Project",
-  },
-  {
-    id: "tech",
-    title: "Tech",
-  },
-  {
-    id: "static",
-    title: "Static",
-  },
-  {
-    id: "contact",
-    title: "Contact",
-  },
 
-];
 
 
 

@@ -66,10 +66,35 @@ const Contact = () => {
   };
 
   return (
-    <div className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}>
+    <div className={`xl:mt-12 flex flex-col-reverse justify-between xl:flex-row gap-10 overflow-hidden`}>
+      {/* Map */}
+      <motion.div
+        variants={slideIn("right", "tween", 0.2, 1)}
+        className='w-full md:w-1/2 p-8'
+      >
+        <div className="leading-loose my-8">
+          <p className="text-gray-300 mb-4">|| Get In Touch</p>
+          <p className="text-gray-100 font-semibold text-4xl">
+            If you have any project or need help. Contact me
+          </p>
+        </div>
+        <div className="sm:h-24 sm:w-24 md:h-96 md:w-96 m-auto mt-16 ring-8 rounded-tl-[5rem] rounded-br-[5rem] ">
+          <div className="sm:h-24 sm:w-24 md:h-96 md:w-96 aspect-w-16 aspect-h-9 ">
+            <iframe
+              className="w-full h-full rounded-tl-[5rem] rounded-br-[5rem] invert shadow-2xl"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14245.733069724769!2d79.5041315!3d26.794329599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1702869691055!5m2!1sen!2sin"
+              title="Google Maps"
+            />
+          </div>
+        </div>
+
+
+      </motion.div>
+
+      {/* Contact Form */}
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
+        className='w-full md:w-1/2 bg-black-100 p-8 rounded-2xl'
       >
         <p className={styles.sectionSubText}>Connect with me</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -121,22 +146,8 @@ const Contact = () => {
           </button>
         </form>
       </motion.div>
-
-      <motion.div
-        variants={slideIn("right", "tween", 0.2, 1)}
-        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
-      >
-        <div className="leading-loose my-8">
-          <p className="text-gray-300 mb-4">|| Get In Touch</p>
-          <p className="text-gray-100 font-semibold text-4xl">
-            If you have any project or need help. Contact me
-          </p>
-        </div>
-        <div className="w-96 h-96 m-auto mt-16 rounded-full ring-8  ">
-          <iframe className="rounded-full w-96 h-96 invert shadow-2xl " src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14245.733069724769!2d79.5041315!3d26.794329599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1702869691055!5m2!1sen!2sin" />
-        </div>
-      </motion.div>
     </div>
+
   );
 };
 
